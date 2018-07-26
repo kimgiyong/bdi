@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	td{
+		cursor:pointer;
+	}
+</style>
+</head>
+<body>
+	로우갯수 : <input type="text" id="rowCnt"><br>
+	컬럼갯수 : <input type="text" id="colCnt"><br>
+	<button type="button" onclick="makeTable()">테이블 생성</button>
+<div id="tDiv">
+
+</div>
+<script>
+function makeTable(){
+	var tDiv = document.querySelector('#tDiv');
+	var tableHtml = '<table border="1">';
+	var row = document.getElementById("rowCnt");
+	var col = document.getElementById("colCnt");
+	alert(row.value);
+	alert(col.value);
+	for(var a=1;a<=row.value;a++){
+		tableHtml += '<tr>';
+		for(var b=1;b<=col.value;b++){
+			tableHtml += '<td>■</td>';
+		}
+		tableHtml += '</tr>';
+	}tableHtml += '</table>';
+	tDiv.innerHTML = tableHtml;
+}
+/* var tDiv = document.querySelector('#tdiv');
+var tableHtml = '<table border="1">';
+tableHtml += '<tr>';
+tableHtml += '<td>하하하</td>';
+tableHtml += '<td>허허허</td>';
+tableHtml += '</tr>';
+tableHtml += '</table>';
+tDiv.innerHTML += tableHtml; */
+</script>
+</body>
+</html>

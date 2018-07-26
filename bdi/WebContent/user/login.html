@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form onsubmit="return checkValue(this)">
+		<table border="1">
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" id="id" name="id"></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" id="password" name="password"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button>로그인</button></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+	function checkValue(fObj){
+		if(fObj.id.value.trim().length<5){
+			alert("아이디는 5글자 이상이어야 합니다.");
+			fObj.id.value = "";
+			fObj.id.focus();
+			return false;
+		}
+		if(fObj.password.value.trim().length<8){
+			alert("비밀번호는 8글자 이상이어야 합니다.");
+			fObj.password.value = "";
+			fObj.password.focus();
+			return false;
+		}
+	}
+	</script>
+</body>
+</html>
