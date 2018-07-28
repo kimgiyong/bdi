@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="rDiv"></div>
+<script>
+	var arr = [[1,2,3,5],[1,2,3,4,5],[1,2,3,4,5,6]];
+	var table = '';
+	for(var a=0;a<arr.length;a++){
+		table += '<table border="1">';
+		table += '<tr>';
+		for(var b=0;b<arr[a].length;b++){
+			table += '<td>' + arr[a][b] + '</td>';
+		}
+		table += '</tr>';
+		table += '</table>';
+	}
+	var rDiv = document.querySelector('#rDiv');
+	rDiv.innerHTML = table;
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="rDiv"></div>
+
+<script>
+var table = '<table border="1">';
+for(var a=1;a<=9;a++){
+	if(a%3==1) {
+		table += '<tr>';
+	}
+	table += '<td>' + a + '</td>';
+	if(a%3==0){
+		table += '</tr>';
+	}
+}
+table += '</table>';
+
+var tDiv = document.querySelector('#rDiv');
+tDiv.innerHTML = table;
+</script>
+</body>
+</html>
